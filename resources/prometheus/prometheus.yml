@@ -16,4 +16,4 @@ scrape_configs:
 scrape_interval: 5s
 
 static_configs:
-- targets: ['localhost:6502']
+- targets: ['netdata:19999']
