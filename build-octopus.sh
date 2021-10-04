@@ -19,3 +19,4 @@ podman run -d --rm -it \
 prom/prometheus
 
 # [INSTALL]
+sudo cp resources/prometheus/* /etc/systemd/system/
