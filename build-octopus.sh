@@ -14,9 +14,8 @@ podman run \
 # grab prometheus
 podman pull prom/prometheus
 # start prometheus
-docker run \
-    -p 9090:9090 \
-    -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml \
-    prom/prometheus
+podman run -d --rm -it \
+-p 9090:9090 \
+prom/prometheus
 
 # [INSTALL]
