@@ -8,7 +8,7 @@ podman login -u toasterrepairman
 podman pull grafana/grafana
 # start grafana
 podman run \
-    -d --name=grafana \
+    -d --rm --name=grafana \
     -p 3000:3000 \
     grafana/grafana
 
@@ -28,3 +28,7 @@ sudo cp resources/services/* /etc/systemd/system/
 # begin prometheus systems
 sudo systemctl start prometheus
 sudo systemctl enable prometheus
+
+# begin prometheus systems
+sudo systemctl start grafana
+sudo systemctl enable grafana
